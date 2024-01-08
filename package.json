@@ -23,5 +23,12 @@
   "bugs": {
     "url": "https://github.com/failaxite/TraduXpress/issues"
   },
-  "homepage": "https://github.com/failaxite/TraduXpress#readme"
+  "homepage": "https://github.com/failaxite/TraduXpress#readme",
+  "devDependencies": {
+    "jest": "^27.5.1",
+    "jest-environment-jsdom": "^29.7.0"
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
+  }
 }
