@@ -1,17 +1,22 @@
 {
   "name": "traduxpress",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "",
   "main": "babel.config.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "test"
+    "test": "jest",
+    "build": "babel src --out-dir dist --copy-files",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/failaxite/TraduXpress.git"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "author": "failaxite",
   "license": "MIT",
@@ -20,10 +25,16 @@
   },
   "homepage": "https://github.com/failaxite/TraduXpress#readme",
   "devDependencies": {
-    "jest": "^27.5.1",
+    "babel-cli": "^6.26.0",
+    "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0"
   },
   "jest": {
     "testEnvironment": "jsdom"
+  },
+  "dependencies": {
+    "@babel/preset-env": "^7.23.8",
+    "axios": "^1.6.5",
+    "babel": "^6.23.0"
   }
 }
