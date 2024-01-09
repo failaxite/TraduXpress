@@ -1,4 +1,5 @@
-const axios = require('axios');
+require('dotenv').config();
+import axios from 'axios';
 
 /**
  * Traduit un terme en fonction de la langue spécifiée ou de la langue du navigateur.
@@ -8,11 +9,11 @@ const axios = require('axios');
  * @param {string} [options.lang] - Langue dans laquelle traduire le terme. Si non spécifié, utilise la langue du navigateur.
  * @returns {Promise<string>} La traduction du terme.
  */
-const traduct = async ({ term, lang }) => {
+export const traduct = async ({ term, lang }) => {
     try {
         const userLanguage = lang || (navigator.language || navigator.userLanguage);
 
-        const rapidAPIKey = '2e93884cb5msh37f0365a8d8518ep1c06dbjsnef9e3009d2b1';
+        const rapidAPIKey = process.env.RAPIDAPI_KEY;
 
         const options = {
             method: 'GET',
@@ -40,5 +41,3 @@ const traduct = async ({ term, lang }) => {
         return term;
     }
 };
-
-module.exports = { traduct };
