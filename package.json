@@ -7,16 +7,11 @@
     "test": "test"
   },
   "scripts": {
-    "test": "jest",
-    "build": "babel src --out-dir dist --copy-files",
-    "prepublishOnly": "npm run build"
+    "test": "test"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/failaxite/TraduXpress.git"
-  },
-  "publishConfig": {
-    "access": "public"
   },
   "author": "failaxite",
   "license": "MIT",

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
     // babel.config.js
     module.exports = {
         presets: [
@@ -12,3 +13,5 @@
         ]
     };
     
+=======
+>>>>>>> parent of fd7c45b (Adding content for system files)
