@@ -1,6 +1,6 @@
 {
   "name": "traduxpress",
-  "version": "1.0.2",
+  "version": "1.0.1",
   "description": "",
   "main": "dist/traduction.js",
   "directories": {
@@ -28,11 +28,13 @@
   "devDependencies": {
     "@babel/cli": "^7.23.4",
     "@babel/core": "^7.23.7",
-    "@babel/preset-env": "^7.23.8",
-    "babel-jest": "^29.7.0",
+    "@babel/preset-env": "^7.23.7",
     "jest": "^27.5.1",
     "jest-environment-jsdom": "^29.7.0",
     "release-it": "^17.0.1"
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
   },
   "release-it": {
     "github": {
@@ -40,13 +42,6 @@
     }
   },
   "dependencies": {
-    "axios": "^1.6.5",
     "dotenv": "^16.3.1"
-  },
-  "jest": {
-    "testEnvironment": "node",
-    "transform": {
-      "^.+\\.js$": "babel-jest"
-    }
   }
 }
