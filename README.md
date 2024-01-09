@@ -31,6 +31,13 @@ async function translateTerm() {
 
 translateTerm();
 ```
+<br>
+
+## Ememple of code works with
+
+https://codepen.io/failaxite/pen/BabzrjM
+
+
 ## API Reference
 
 traduxpress(options)
