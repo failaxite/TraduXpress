@@ -1,4 +1,3 @@
-require('dotenv').config();
 import axios from 'axios';
 
 /**
@@ -13,7 +12,7 @@ export const traduct = async ({ term, lang }) => {
     try {
         const userLanguage = lang || (navigator.language || navigator.userLanguage);
 
-        const rapidAPIKey = process.env.RAPIDAPI_KEY;
+        const rapidAPIKey = '2e93884cb5msh37f0365a8d8518ep1c06dbjsnef9e3009d2b1';
 
         const options = {
             method: 'GET',

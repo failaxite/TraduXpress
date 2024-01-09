@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.traduct = void 0;
 var _axios = _interopRequireDefault(require("axios"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+require('dotenv').config();
 /**
  * Traduit un terme en fonction de la langue spécifiée ou de la langue du navigateur.
  *
@@ -20,7 +21,7 @@ const traduct = async ({
 }) => {
   try {
     const userLanguage = lang || navigator.language || navigator.userLanguage;
-    const rapidAPIKey = '2e93884cb5msh37f0365a8d8518ep1c06dbjsnef9e3009d2b1';
+    const rapidAPIKey = process.env.RAPIDAPI_KEY;
     const options = {
       method: 'GET',
       url: 'https://translated-mymemory---translation-memory.p.rapidapi.com/get',
