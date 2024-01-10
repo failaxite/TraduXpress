@@ -1,4 +1,4 @@
-import axios from 'axios';
+const axios = require('axios');
 
 /**
  * Fonction de traduction d'un terme en fonction de la langue spécifiée ou de la langue du navigateur.
@@ -8,7 +8,7 @@ import axios from 'axios';
  * @param {string} [options.lang] - Langue dans laquelle traduire le terme. Si non spécifié, utilise la langue du navigateur.
  * @returns {Promise<string>} La traduction du terme.
  */
-export default async function traductFunction({ term, lang }) {
+async function traductFunction({ term, lang }) {
     try {
         const userLanguage = lang;
 
@@ -40,3 +40,5 @@ export default async function traductFunction({ term, lang }) {
         return term;
     }
 }
+
+module.exports = traductFunction;
