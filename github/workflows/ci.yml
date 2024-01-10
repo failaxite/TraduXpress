@@ -3,18 +3,38 @@ name: CI/CD
 on:
   push:
     branches:
-      - main
+      
+main
 
 jobs:
   test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
+      
+name: 'Checkout repository'
+      uses: actions/checkout@v3
 
-      - name: Install dependencies
-        run: npm install
+      
+name: 'Setup Node.js'
+      uses: actions/setup-node@v3
+      with:
+        node-version: '19'
 
-      - name: Run tests
-        run: npm test
+      
+name: 'Install dependencies'
+      run: npm install
+
+      
+name: 'Run tests'
+      run: npm test
+
+      
+name: 'Run eslint'
+      run: npx eslint index.js
+
+      
+name: 'Publish to NPM'
+      uses: js-devTools/npm-publish@v2
+      with:
+        token: ${{ secrets.NPM_TOKEN}}
